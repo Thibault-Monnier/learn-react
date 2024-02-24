@@ -1,0 +1,27 @@
+{
+  "name": "chess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc -w",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thibault-Monnier/chess.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thibault-Monnier/chess/issues"
+  },
+  "homepage": "https://github.com/Thibault-Monnier/chess#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4",
+    "@types/jest": "^29.5.2"
+  }
+}
