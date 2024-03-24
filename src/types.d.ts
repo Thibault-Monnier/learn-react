@@ -9,5 +9,6 @@ declare namespace JSX {
         button: any
         span: any
         canvas: any
+        img: any
     }
 }

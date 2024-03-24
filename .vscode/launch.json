@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Chrome",
-            "url": "file:///C:/Users/thibault.monnier/Documents/Programming/Chrome/Other%20Programs/my-website/index.html"
+            "url": "file:///C:/Users/thibault.monnier/Documents/Programming/Chrome/Other%20Programs/learn-react/index.html"
         }
     ]
 }

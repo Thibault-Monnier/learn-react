@@ -14,6 +14,7 @@ type TbElement =
     | string
 
 // render({type: 'ul', props: {children: [{type: 'li', props: {children: ["Item 1"]}, {type: 'li', props: {children: ["Item 2"]}], style: "color: blue;"})
+// <ul style="color:blue;"><li>Item 1</li><li>Item 2</li></ul>
 function render(element: TbElement, parentEl = document.getElementById('app')!) {
     if (typeof element === 'string') {
         parentEl.innerText = element
@@ -45,10 +46,7 @@ const app = (
     <div class="chess">
         <div class="left_panel">
             <div class="improvements">
-                <h1>
-                    Work in progress:
-                    Au fait, il est {new Date(Date.now()).toLocaleString()}
-                </h1>
+                <h1>Work in progress: Au fait, il est {new Date(Date.now()).toLocaleString()}</h1>
                 <p>UI</p>
 
                 <h1>TODO:</h1>
