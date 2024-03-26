@@ -1,3 +1,7 @@
+import * as React from 'react'
+import { ReactNode } from 'react'
+import * as ReactDOM from 'react-dom'
+
 function h(type: string, props: any, ...children: any) {
     return { type, props: { children, ...props } }
 }
@@ -43,9 +47,9 @@ function render(element: TbElement, parentEl = document.getElementById('app')!) 
 }
 
 const app = (
-    <div class="chess">
-        <div class="left_panel">
-            <div class="improvements">
+    <div className="chess">
+        <div className="left_panel">
+            <div className="improvements">
                 <h1>Work in progress: Au fait, il est {new Date(Date.now()).toLocaleString()}</h1>
                 <p>UI</p>
 
@@ -59,45 +63,45 @@ const app = (
                 <p>Arrows?</p>
             </div>
 
-            <div class="playmode">
+            <div className="playmode">
                 <button id="player_vs_player">
-                    <div class="playmode_arrow" id="player_vs_player_arrow"></div>
+                    <div className="playmode_arrow" id="player_vs_player_arrow"></div>
                     <span>Player vs Player</span>
-                    <div class="playmode_arrow"></div>
+                    <div className="playmode_arrow"></div>
                 </button>
                 <button id="player_vs_bot">
-                    <div class="playmode_arrow" id="player_vs_bot_arrow"></div>
+                    <div className="playmode_arrow" id="player_vs_bot_arrow"></div>
                     <span>Player vs Bot</span>
-                    <div class="playmode_arrow"></div>
+                    <div className="playmode_arrow"></div>
                 </button>
                 <button id="bot_vs_bot">
-                    <div class="playmode_arrow" id="bot_vs_bot_arrow"></div>
+                    <div className="playmode_arrow" id="bot_vs_bot_arrow"></div>
                     <span>Bot vs Bot</span>
-                    <div class="playmode_arrow"></div>
+                    <div className="playmode_arrow"></div>
                 </button>
             </div>
         </div>
 
-        <div class="header">
-            <div id="next_player" class="next_player">
-                <div id="white_to_move" class="white_to_move">
-                    <div class="square"></div>
+        <div className="header">
+            <div id="next_player" className="next_player">
+                <div id="white_to_move" className="white_to_move">
+                    <div className="square"></div>
                     White to move
                 </div>
-                <div id="black_to_move" class="black_to_move" style="display: none">
-                    <div class="square"></div>
+                <div id="black_to_move" className="black_to_move" style={{ display: 'none' }}>
+                    <div className="square"></div>
                     Black to move
                 </div>
-                <div id="end_of_game" style="display: none"></div>
+                <div id="end_of_game" style={{ display: 'none' }}></div>
             </div>
-            <div id="evaluation" class="evaluation"></div>
+            <div id="evaluation" className="evaluation"></div>
         </div>
 
-        <canvas id="board" class="board" />
+        <canvas id="board" className="board" />
 
-        <div class="panel">
-            <div id="moves" class="moves"></div>
-            <div class="actions">
+        <div className="panel">
+            <div id="moves" className="moves"></div>
+            <div className="actions">
                 <button id="undo" disabled>
                     &lt;
                 </button>
@@ -110,4 +114,20 @@ const app = (
     </div>
 )
 
-render(app)
+/*interface AppProps {
+    children?: ReactNode
+}
+
+const App = ({ children }: AppProps): JSX.Element => {
+    return <div>Coucou {children}</div>
+}
+
+const app = <App />
+*/
+
+console.log(JSON.stringify(app))
+
+//render(app)
+
+const root = document.getElementById('app')
+ReactDOM.render(app, root)
